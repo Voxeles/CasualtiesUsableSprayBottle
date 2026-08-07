@@ -1,4 +1,5 @@
-﻿using BepInEx;
+﻿using System;
+using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
 
@@ -22,6 +23,12 @@ public class Plugin : BaseUnityPlugin
 
 		_harmony.PatchAll();
 		Logger.LogInfo($"Plugin {ModName} is loaded!");
+	}
+
+	public void OnDestroy()
+	{
+		_harmony?.UnpatchSelf();
+		Instance = null;
 	}
 }
 
