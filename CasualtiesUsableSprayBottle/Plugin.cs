@@ -5,15 +5,15 @@ using HarmonyLib;
 
 namespace CasualtiesUsableSprayBottle;
 
-[BepInPlugin(ModGUID, ModName, ModVersion)]
+[BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
 public class Plugin : BaseUnityPlugin
 {
-	public const string ModGUID = "vee.usable.spray.bottle";
-	public const string ModName = "CasualtiesUsableSprayBottle";
-	public const string ModVersion = "1.0.0";
+	public const string ModGuid = MyPluginInfo.PLUGIN_GUID;
+	public const string ModName = MyPluginInfo.PLUGIN_NAME;
+	public const string ModVersion = MyPluginInfo.PLUGIN_VERSION;
 
 	internal static new ManualLogSource Logger;
-	private readonly Harmony _harmony = new(ModGUID);
+	private readonly Harmony _harmony = new(ModGuid);
 	public static Plugin Instance { get; private set; } = null!;
 
 	public void Awake()
@@ -31,4 +31,3 @@ public class Plugin : BaseUnityPlugin
 		Instance = null;
 	}
 }
-

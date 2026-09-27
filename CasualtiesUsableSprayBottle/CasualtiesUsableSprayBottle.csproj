@@ -1,9 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
+    <BepInExPluginGuid>vee.usable.spray.bottle</BepInExPluginGuid>
+    <ProjectName>CasualtiesUsableSprayBottle</ProjectName>
+    <Version>1.0.0</Version>
     <AssemblyName>$(ProjectName)</AssemblyName>
     <Product>$(ProjectName)</Product>
-    <Version>1.0.0</Version>
+    <BepInExPluginName>$(ProjectName)</BepInExPluginName>
+    <BepInExPluginVersion>$(Version)</BepInExPluginVersion>
+    <AssemblyName>$(ProjectName)</AssemblyName>
+    <Product>$(ProjectName)</Product>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
     <RestoreAdditionalProjectSources>
